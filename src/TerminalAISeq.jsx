@@ -34,7 +34,7 @@ function SkillsSection() {
   };
 
   return (
-    <div style={{ padding: "0 26px", marginTop: 22 }}>
+    <div className="hc-sec" style={{ padding: "0 26px", marginTop: 22 }}>
       <UserPrompt text="What are his skills?" />
       <ToolCall name="SlashCommand" args='"/skills --grouped"' result={`${cv.skills.length} groups`} />
 
@@ -109,7 +109,7 @@ function RecentProjectsSection() {
   }).join("\n");
 
   return (
-    <div style={{ padding: "0 26px", marginTop: 22 }}>
+    <div className="hc-sec" style={{ padding: "0 26px", marginTop: 22 }}>
       <UserPrompt text="What has he been working on recently?" />
       <ToolCall name="Bash" args='"gcloud run services list"' result={`${projects.length} services`} />
 
@@ -202,11 +202,11 @@ function CareerSection() {
   const pct = (t) => (t - minT) / span * 100;
 
   return (
-    <div style={{ padding: "0 26px", marginTop: 22 }}>
+    <div className="hc-sec" style={{ padding: "0 26px", marginTop: 22 }}>
       <UserPrompt text="What's his full career history?" />
 
       {/* MCP connection banner — distinct visual treatment */}
-      <div style={{
+      <div className="hc-mcp" style={{
         margin: "8px 0",
         padding: "8px 14px",
         background: "rgba(105, 210, 232, 0.06)",
@@ -314,7 +314,7 @@ function CareerSection() {
           {cv.experience.map((r, i) => {
           const brand = brandOf(r.company);
           return (
-          <div key={i} style={{
+          <div key={i} className="hc-career-row" style={{
             display: "grid", gridTemplateColumns: "180px 1fr",
             gap: 18, padding: "12px 0",
             borderTop: i > 0 ? `1px dashed ${TAI_S.rule}` : "none"
@@ -426,13 +426,13 @@ function QualificationsSection() {
   ).join("\n");
 
   return (
-    <div style={{ padding: "0 26px", marginTop: 22 }}>
+    <div className="hc-sec" style={{ padding: "0 26px", marginTop: 22 }}>
       <UserPrompt text="What are his qualifications?" />
       <ToolCall name="Bash" args='"kubectl get certificates"' result={`${resources.length} resources`} />
 
       <CodeBlock prompt="kubectl get certificates" content={`${kubeHeader}\n${kubeBody}`} />
 
-      <div style={{
+      <div className="hc-qual-grid" style={{
         marginTop: 14,
         display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12
       }}>
@@ -525,7 +525,7 @@ function PublicationsSection() {
   const key = `cai${p.year}`;
 
   return (
-    <div style={{ padding: "0 26px", marginTop: 22 }}>
+    <div className="hc-sec" style={{ padding: "0 26px", marginTop: 22 }}>
       <UserPrompt text="Does he have any published research?" />
       <ToolCall name="Read" args='"publications.bib"' result={`1 paper`} />
 
@@ -537,7 +537,7 @@ function PublicationsSection() {
         display: "grid", gridTemplateColumns: "auto 1fr", gap: 0
       }}>
         {/* Venue ribbon */}
-        <div style={{
+        <div className="hc-pub-spine" style={{
           padding: "0 8px",
           background: "#0A0910",
           borderRight: `1px solid ${TAI_S.rule}`,
@@ -553,7 +553,7 @@ function PublicationsSection() {
         </div>
 
         {/* body */}
-        <div style={{ padding: "18px 22px" }}>
+        <div className="hc-pub-body" style={{ padding: "18px 22px" }}>
           <div style={{
             fontFamily: TAI_S.sans, fontSize: 18, lineHeight: 1.35,
             color: TAI_S.ink, fontWeight: 600,

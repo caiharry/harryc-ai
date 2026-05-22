@@ -76,7 +76,7 @@ function AskUserQuestion({ question, options, onPick, picked, disabled }) {
         <span style={{ color: TAI_A.mute }}>·</span>
         <span style={{ fontFamily: TAI_A.font, fontSize: 12, color: TAI_A.ink }}>{question}</span>
       </div>
-      <div style={{
+      <div className="hc-ask-options" style={{
         display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
         padding: 12, gap: 10
       }}>
@@ -180,7 +180,6 @@ Got 20 minutes next week?
           textTransform: "uppercase", letterSpacing: "0.16em"
         }}>
           <span>✉ Email Harry</span>
-          <span style={{ color: TAI_A.green }}>● ready to send</span>
         </div>
 
         <FormField label="To" value={to} readOnly />
@@ -258,6 +257,7 @@ function CalendarBranch() {
         <iframe
           src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2FaVAcvg9ce2DGI7ewjTa5wg16Fic1hqTO3QnnXMIgA6zR2XH0Ju0ZMOKgwIVCclJDV7vjCL5F?gv=true"
           title="Book a meeting with Harry"
+          className="hc-cal-iframe"
           style={{ border: 0, width: "100%", height: 600, display: "block", background: TAI_A.paper }}
           frameBorder="0"
         />
@@ -366,7 +366,6 @@ Let me know if you'd like to chat.
           letterSpacing: "0.16em", textTransform: "uppercase"
         }}>
           <span>£ Send offer</span>
-          <span style={{ color: TAI_A.accent }}>cost $0.00</span>
         </div>
 
         {/* day rate row with band visual */}
@@ -422,7 +421,7 @@ Let me know if you'd like to chat.
         </div>
 
         {/* duration + start side by side */}
-        <div style={{
+        <div className="hc-form-side" style={{
           display: "grid", gridTemplateColumns: "1fr 1fr",
           borderBottom: `1px solid ${TAI_A.rule}`
         }}>
@@ -473,7 +472,7 @@ Let me know if you'd like to chat.
 
 function FormField({ label, value, onChange, readOnly, leftBorder }) {
   return (
-    <div style={{
+    <div className={leftBorder ? "hc-form-side-2" : undefined} style={{
       padding: "10px 16px",
       borderTop: `1px solid ${TAI_A.rule}`,
       borderLeft: leftBorder ? `1px solid ${TAI_A.rule}` : "none"
@@ -524,7 +523,7 @@ function WorkWithMeSection({ onBranch }) {
 
 
   return (
-    <div style={{ padding: "0 26px 12px", marginTop: 22 }}>
+    <div className="hc-sec" style={{ padding: "0 26px 12px", marginTop: 22 }}>
       <UserPromptA text="How do I work with him?" />
 
       <Plan activeStep={planStep} />

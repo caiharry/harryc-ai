@@ -23,6 +23,87 @@
 
   /* Polish image-slot to match the terminal aesthetic. */
   image-slot { --is-border: 1px dashed #2A2731; --is-bg: #0A0910; --is-color: #6D6957; }
+
+  /* ───────────────────────────────────────────────────────────────────────
+     Mobile overrides. Classes below are no-ops on desktop (no rules attached),
+     so this is invisible at ≥721px. On narrow screens, !important rules win
+     over the inline styles in the React components.
+     ─────────────────────────────────────────────────────────────────────── */
+  @media (max-width: 720px) {
+    /* Section side padding — pull in from 26px so cards fill the viewport. */
+    .hc-sec { padding-left: 14px !important; padding-right: 14px !important; }
+
+    /* Window chrome title can wrap or overflow — shrink and ellipsis. */
+    .hc-chrome-title {
+      font-size: 10.5px !important;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+
+    /* Banner: tighter top padding; ASCII art shrinks dramatically. */
+    .hc-banner { padding: 18px 14px 4px !important; }
+    .hc-ascii { font-size: 6px !important; line-height: 1.05 !important; }
+    .hc-banner-card { padding: 12px 14px !important; font-size: 12px !important; }
+
+    /* HuggingFace model card: avatar above frontmatter, not beside. */
+    .hc-hf-body {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+      padding: 16px !important;
+    }
+    .hc-hf-avatar { width: 132px !important; height: 132px !important; }
+    .hc-hf-row {
+      grid-template-columns: 110px 1fr !important;
+      font-size: 12px !important;
+    }
+    .hc-hf-header { font-size: 10.5px !important; padding: 8px 12px !important; }
+    .hc-hf-header-meta { gap: 8px !important; }
+
+    /* Career timeline rows: stack date column above content. */
+    .hc-career-row {
+      grid-template-columns: 1fr !important;
+      gap: 6px !important;
+    }
+
+    /* Qualifications: single column. */
+    .hc-qual-grid { grid-template-columns: 1fr !important; }
+
+    /* AskUserQuestion: stack three options vertically. */
+    .hc-ask-options { grid-template-columns: 1fr !important; }
+
+    /* Offer form: duration + start date stack, drop the left border. */
+    .hc-form-side { grid-template-columns: 1fr !important; }
+    .hc-form-side-2 { border-left: none !important; }
+
+    /* Publications: spine ribbon gets tighter; body must allow shrinking
+       below its min-content (the BibTeX pre block) or it blows out the viewport. */
+    .hc-pub-spine { padding: 0 4px !important; }
+    .hc-pub-body {
+      padding: 14px 16px !important;
+      min-width: 0 !important;
+      overflow: hidden !important;
+    }
+
+    /* Status bar: wrap items, smaller gaps. */
+    .hc-status { gap: 8px !important; font-size: 10px !important; }
+
+    /* Plan / MCP banner: allow wrap. */
+    .hc-mcp { font-size: 11px !important; gap: 8px !important; }
+
+    /* Calendar iframe — give it more vertical room since it's narrow now. */
+    .hc-cal-iframe { height: 720px !important; }
+
+    /* Hero card maxWidth was 680 — release on mobile. */
+    .hc-banner-card { max-width: none !important; }
+
+    /* Recent projects header (service · project · region) wraps with smaller gap. */
+    .hc-svc-header { font-size: 11px !important; }
+  }
+
+  @media (max-width: 420px) {
+    /* Very narrow: even smaller ASCII. */
+    .hc-ascii { font-size: 4.5px !important; }
+    .hc-hf-row { grid-template-columns: 95px 1fr !important; font-size: 11.5px !important; }
+  }
 </style>
 
 <!-- React + Babel (pinned) -->

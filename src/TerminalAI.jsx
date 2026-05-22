@@ -164,7 +164,7 @@ function WindowChrome() {
         <span style={{ width: 11, height: 11, borderRadius: "50%", background: "#FEBC2E" }} />
         <span style={{ width: 11, height: 11, borderRadius: "50%", background: "#28C840" }} />
       </div>
-      <div style={{
+      <div className="hc-chrome-title" style={{
         fontFamily: TAI.font, fontSize: 12, color: TAI.inkSoft,
         textAlign: "center", letterSpacing: "0.04em"
       }}>
@@ -180,7 +180,7 @@ function WindowChrome() {
 
 function StatusBar({ branch }) {
   return (
-    <div style={{
+    <div className="hc-status" style={{
       padding: "8px 18px", borderTop: `1px solid ${TAI.rule}`,
       background: TAI.paper,
       fontFamily: TAI.font, fontSize: 11, color: TAI.inkSoft,
@@ -215,8 +215,8 @@ function Banner() {
    ╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚═╝  ╚═╝    ╚═╝     ╚═════╝    ╚═╝  ╚═╝ ╚═╝`;
 
   return (
-    <div style={{ padding: "30px 26px 4px" }}>
-      <pre style={{
+    <div className="hc-banner" style={{ padding: "30px 26px 4px" }}>
+      <pre className="hc-ascii" style={{
         margin: 0,
         fontFamily: TAI.font,
         fontSize: 11,
@@ -231,7 +231,7 @@ function Banner() {
         whiteSpace: "pre"
       }}>{art}</pre>
 
-      <div style={{
+      <div className="hc-banner-card" style={{
         marginTop: 18,
         padding: "14px 16px",
         border: `1px solid ${TAI.rule}`,
@@ -277,11 +277,12 @@ function HFModelCard() {
       overflow: "hidden"
     }}>
       {/* HF-style header strip */}
-      <div style={{
+      <div className="hc-hf-header" style={{
         padding: "10px 14px", borderBottom: `1px solid ${TAI.rule}`,
         display: "flex", justifyContent: "space-between", alignItems: "center",
         background: "#0A0910",
-        fontFamily: TAI.font, fontSize: 11.5, color: TAI.mute
+        fontFamily: TAI.font, fontSize: 11.5, color: TAI.mute,
+        flexWrap: "wrap", gap: 8
       }}>
         <span>
           <span style={{ color: TAI.amber }}>🤗</span>{" "}
@@ -291,7 +292,7 @@ function HFModelCard() {
           <span style={{ color: TAI.mute }}> / </span>
           <span style={{ color: TAI.accent }}>cloud-architect-3.5</span>
         </span>
-        <span style={{ display: "flex", gap: 12 }}>
+        <span className="hc-hf-header-meta" style={{ display: "flex", gap: 12 }}>
           <span><span style={{ color: TAI.amber }}>♥</span> 8.3B</span>
           <span><span style={{ color: TAI.cyan }}>↓</span> 5</span>
           <span style={{ color: TAI.rule }}>│</span>
@@ -303,7 +304,7 @@ function HFModelCard() {
       </div>
 
       {/* card body — avatar left, frontmatter right */}
-      <div style={{
+      <div className="hc-hf-body" style={{
         display: "grid", gridTemplateColumns: "180px 1fr", gap: 24,
         padding: "20px 22px"
       }}>
@@ -331,6 +332,7 @@ function HFModelCard() {
             return (
               <div
                 aria-label="hc monogram"
+                className="hc-hf-avatar"
                 style={{
                   position: "relative",
                   width: "180px", height: "180px",
@@ -358,7 +360,7 @@ function HFModelCard() {
           }}>---</div>
 
           {rows.map((r) =>
-          <div key={r.k} style={{
+          <div key={r.k} className="hc-hf-row" style={{
             fontFamily: TAI.font, fontSize: 13.5, lineHeight: 1.85,
             display: "grid", gridTemplateColumns: "140px 1fr", alignItems: "baseline"
           }}>
@@ -400,7 +402,7 @@ function HFModelCard() {
 function WhoamiSection() {
   const cv = window.CV;
   return (
-    <div style={{ padding: "0 26px", marginTop: 22 }}>
+    <div className="hc-sec" style={{ padding: "0 26px", marginTop: 22 }}>
       <UserPrompt text="Who is Harry Cai?" />
       <ToolCall name="Bash" args='"whoami && cat ./model-card.md"' result="1 card" />
 
