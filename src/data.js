@@ -1,0 +1,202 @@
+// Shared CV data for all directions. Single source of truth.
+window.CV = {
+  name: "Harry Cai",
+  title: "Senior Cloud Architect",
+  tagline: "Agentic AI for the enterprise.",
+  taglines: [
+    "Agentic AI for the enterprise.",
+    "Building production AI since GPT-3.5.",
+    "Cloud architect. ADK / A2A / MCP.",
+    "London, UK — available for senior engagements.",
+  ],
+  bioShort: "Senior Cloud Architect and AI consultant specialising in Agentic AI delivery for enterprise clients.",
+  bio: "Senior Cloud Architect and AI consultant specialising in Agentic AI delivery for enterprise clients. Building production LLM and agent systems since ChatGPT’s public release in late 2022, with over three and a half years of uninterrupted, full-time delivery in a field that is at most three and a half years old. Early adopter of Google’s Agent Development Kit (ADK), A2A, and MCP protocols. Practitioner of Spec-Driven Development and agentic development workflows, translating cutting-edge AI tooling into production-grade systems for mid-to-large enterprises.",
+  bioParagraphs: [
+    "Harry Cai is a Senior Cloud Architect and AI consultant specialising in Agentic AI delivery for enterprise clients. He's been building production LLM and agent systems since ChatGPT's public release in late 2022 — over three and a half years of uninterrupted, full-time delivery in a field that's at most three and a half years old.",
+    "He's an early adopter of Google's Agent Development Kit (ADK), A2A, and MCP protocols, and a practitioner of Spec-Driven Development and agentic development workflows — translating cutting-edge AI tooling into production-grade systems for mid-to-large enterprises.",
+  ],
+  contact: {
+    email: "harry.cai@hotmail.com",
+    github: "github.com/caiharry",
+    githubUrl: "https://github.com/caiharry",
+    calendar: "https://calendar.app.google/harrycai",
+    location: "London, UK",
+  },
+  stats: [
+    { value: "3.5", unit: "yrs", label: "Full-time on production AI" },
+    { value: "£4.2M", unit: "", label: "GenAI pipeline grown from zero" },
+    { value: "80%", unit: "", label: "PoC-to-production lead time cut" },
+    { value: "5", unit: "", label: "Google Cloud certifications" },
+  ],
+  skills: [
+    {
+      label: "AI / Agents",
+      items: ["Agentic AI", "GenAI", "ADK", "MCP", "A2A", "RAG", "Grounding", "Evals", "LangGraph", "LangChain", "GenOps", "AgentOps", "Observability", "Guardrails", "AI Safety", "Model Armor"],
+    },
+    {
+      label: "Models & Platforms",
+      items: ["Agent Platform", "Gemini", "Claude", "GPT"],
+    },
+    {
+      label: "ML / MLOps",
+      items: ["Machine Learning", "MLOps", "Vertex AI", "Kubeflow", "SageMaker", "TensorFlow", "PyTorch", "Reinforcement Learning", "Federated Learning"],
+    },
+    {
+      label: "Cloud & Infra",
+      items: ["Google Cloud", "AWS", "Cloud Run", "GKE", "Terraform", "Docker", "CI/CD", "GitOps"],
+    },
+    {
+      label: "Other",
+      items: ["Python", "Spec-Driven Development", "Cloud Architecture", "Consultancy", "Line Management", "Public Speaking", "Agile"],
+    },
+  ],
+  experience: [
+    {
+      company: "Datatonic",
+      role: "Senior Cloud Architect",
+      dates: "Feb 2025 — present",
+      location: "London",
+      blurb: "Enterprise Agentic AI delivery and Cloud Architecture consulting. 12× Google Cloud Partner of the Year.",
+      bullets: [
+        "Built a sports and betting assistant agent with tool access to live data feeds, backend databases and APIs. Implemented A2A protocol across a multi-agent system and designed a multi-agent evaluation framework.",
+        "Built a personal finance assistant for a Swiss digital bank’s mobile app, with careful agentic workflow design and robust security guarantees for user data separation. Integrated data via MCP.",
+        "Built a creative workbench for music video production for a US media company, leveraging Gemini, Imagen, and Veo to support ideation, storyboarding and end-to-end generation. Implemented a simplified VISTA agent (iterative video refinement) using ADK.",
+        "Conducted Google Cloud estate audits across DS, ML and production workloads for a UK FTSE50 insurance company and a UK automotive marketplace, and designed enterprise ML Platforms for engineering delivery.",
+      ],
+    },
+    {
+      company: "Digital Genius",
+      role: "Senior Machine Learning Engineer",
+      dates: "Apr 2024 — Feb 2025",
+      location: "London",
+      blurb: "Visual and conversational AI for a retail and e-commerce scale-up.",
+      bullets: [
+        "Led a company-wide cloud architecture audit.",
+        "Built LLM guardrails and self-serve vector database management.",
+        "Migrated ML training and deployment pipelines to SageMaker.",
+      ],
+    },
+    {
+      company: "Datatonic",
+      role: "Senior ML Engineer / MLOps Engineer",
+      dates: "Sep 2021 — Apr 2024",
+      location: "London",
+      blurb: null,
+      bullets: [
+        "Delivered enterprise MLOps and GenAI solutions for BT and Delivery Hero.",
+        "Line-managed an internal engineering team; co-developed GenAI product offerings with strategy & sales.",
+        "Grew the GenAI sales pipeline from £0 to £4.2 million by September 2023.",
+      ],
+    },
+    {
+      company: "Vodafone",
+      role: "MLOps Engineer",
+      dates: "Sep 2020 — Sep 2021",
+      location: "London",
+      blurb: null,
+      bullets: [
+        "Built an enterprise MLOps platform on Kubeflow, now known as AIBooster.",
+        "Reduced PoC-to-production lead time by 80% — “as little as four weeks” [James Ma, Google Cloud].",
+      ],
+    },
+    {
+      company: "Autodesk",
+      role: "Software Engineer",
+      dates: "Jul 2018 — Sep 2019",
+      location: "Birmingham",
+      blurb: "Collaborative Research & Innovation team at a global leader in engineering and manufacturing software.",
+      bullets: [
+        "Applied Deep Learning to improve additive manufacturing processes.",
+        "Trained Reinforcement Learning agents in a milling simulation using Unity.",
+        "Delivered an aerospace plugin for Fusion 360, DevOps pipelines, and a cloud-based toolpath microservice.",
+      ],
+    },
+  ],
+  education: [
+    {
+      institution: "Imperial College London",
+      degree: "MSc Computing (AI & ML), Distinction",
+      dates: "2019 — 2020",
+      note: "Collaborated with Consensys to develop Federated Learning protocols using Blockchain. Research paper accepted at IEEE Workshop on Advances in AI for Blockchain (2020).",
+    },
+    {
+      institution: "University of Warwick",
+      degree: "BSc Mathematics, 1st Class",
+      dates: "2015 — 2018",
+      note: "President of the Public Speaking Society (2017–18). LTA Accredited Level 2 Tennis Coach.",
+    },
+    {
+      institution: "Center for AI Safety",
+      degree: "Intro to ML Safety",
+      dates: "Jun — Aug 2023 · Remote",
+      note: "Technical grounding in AI risk, robustness, alignment, and governance frameworks for advanced AI systems.",
+    },
+  ],
+  certifications: [
+    { name: "Generative AI Leader (GAIL)", issuer: "Google Cloud", date: "Oct 2025" },
+    { name: "Professional Cloud Architect", issuer: "Google Cloud", date: "Feb 2026" },
+    { name: "Professional ML Engineer", issuer: "Google Cloud", date: "Mar 2026" },
+    { name: "Professional Cloud Developer", issuer: "Google Cloud", date: "Apr 2026" },
+    { name: "Intro to ML Safety", issuer: "Center for AI Safety", date: "Aug 2023" },
+    { name: "HCD Practitioner", issuer: "LUMA Institute", date: "May 2019" },
+  ],
+  publications: [
+    {
+      title: "2CP: Decentralised Protocols to Transparently Evaluate Contributivity in Blockchained Federated Learning Environments",
+      venue: "IEEE 2nd Workshop on Advances in Artificial Intelligence for Blockchain",
+      year: "2020",
+      authors: ["Harry Cai", "Daniel Rueckert", "Jonathan Passerat-Palmbach"],
+      affiliation: "Imperial College London · ConsenSys Health",
+      arxiv: "2011.07516",
+      doi: "10.1109/Blockchain50366.2020.00041",
+    },
+  ],
+  // Three Datatonic engagements highlighted under "$ gcloud run services list".
+  // Each row is a faux Cloud Run service for the prompt-3 card grid.
+  recentProjects: [
+    {
+      service: "generative-media",
+      project: "us-media-co",
+      region: "us-west2",
+      revision: "generative-media-00042-vid",
+      traffic: "100%",
+      lastDeploy: "3d ago",
+      status: "serving",
+      headline: "End-to-end music video generation",
+      blurb: "A creative workbench for a US media company. Ideation → storyboard → shot generation, with a simplified VISTA agent for iterative video refinement.",
+      stack: ["Gemini", "Imagen", "Veo", "ADK", "VISTA"],
+    },
+    {
+      service: "finance-copilot",
+      project: "ch-digital-bank",
+      region: "europe-west6",
+      revision: "finance-copilot-00118-fin",
+      traffic: "100%",
+      lastDeploy: "11h ago",
+      status: "serving",
+      headline: "Personal finance assistant",
+      blurb: "Agentic mobile-app companion for a Swiss digital bank. Careful workflow design, hard user-data separation, MCP for backend integration.",
+      stack: ["ADK", "MCP", "Gemini", "BigQuery", "Model Armor"],
+    },
+    {
+      service: "sports-agent",
+      project: "sports-betting-co",
+      region: "europe-west2",
+      revision: "sports-agent-00203-spt",
+      traffic: "100%",
+      lastDeploy: "2h ago",
+      status: "serving",
+      headline: "Sports & betting assistant",
+      blurb: "Multi-agent betting assistant with tool access to live data feeds, databases and APIs. A2A protocol across agents and a custom eval framework.",
+      stack: ["A2A", "Multi-agent", "Evals", "Live feeds", "ADK", "Model Armor"],
+    },
+  ],
+  // Career rows ordered by start_date ASC — for the mcp__bigquery output.
+  careerRows: [
+    { start_date: "2018-07-01", end_date: "2019-09-01", company: "Autodesk",      role: "Software Engineer",                location: "Birmingham" },
+    { start_date: "2020-09-01", end_date: "2021-09-01", company: "Vodafone",      role: "MLOps Engineer",                    location: "London" },
+    { start_date: "2021-09-01", end_date: "2024-04-01", company: "Datatonic",     role: "Senior ML / MLOps Engineer",         location: "London" },
+    { start_date: "2024-04-01", end_date: "2025-02-01", company: "Digital Genius",role: "Senior Machine Learning Engineer",   location: "London" },
+    { start_date: "2025-02-01", end_date: null,         company: "Datatonic",     role: "Senior Cloud Architect",             location: "London" },
+  ],
+};
